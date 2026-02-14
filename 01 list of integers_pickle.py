@@ -17,7 +17,7 @@ with open("data.pkl", "wb") as file:
 with open("data.pkl", "rb") as file:
     loaded = pickle.load(file)
 
-# verzia2:
+# # verzia2:
 import pickle
 
 numbers = []
@@ -41,6 +41,16 @@ with open("data.pkl", "rb") as file:
 print(loaded)
 
 # verzia3:
+# funkcia split, funkcia strip
+
+# def strip(self, *args, **kwargs):  # real signature unknown
+#     """
+#     Return a copy of the string with leading and trailing whitespace removed.
+#
+#     If chars is given and not None, remove characters in chars instead.
+#     """
+#     pass
+
 import pickle
 
 numbers = []
@@ -50,7 +60,7 @@ parts = user.split(",")
 for part in parts:
     part = part.strip()
     if part != "":
-        numbers.append(part)
+        numbers.append(int(part))
 
 with open("data.pkl", "wb") as file:
     pickle.dump(numbers, file)
